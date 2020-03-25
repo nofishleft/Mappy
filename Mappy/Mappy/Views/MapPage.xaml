@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:mappy="clr-namespace:Mappy"
+             mc:Ignorable="d"
+             x:Class="Mappy.Views.MapPage"
+             BackgroundColor="Black">
+    <AbsoluteLayout>
+        <skia:SKCanvasView x:Name="Canvas" PaintSurface="OnPaint" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+            <!-- Gestures -->
+            <skia:SKCanvasView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ToggleSidePanel" NumberOfTapsRequired="2"/>
+            </skia:SKCanvasView.GestureRecognizers>
+        </skia:SKCanvasView>
+        <!-- Legacy
+        <ContentView x:Name="SideBar" AbsoluteLayout.LayoutBounds="1,0,0.25,1" AbsoluteLayout.LayoutFlags="All">
+            <Frame BorderColor="Gray" WidthRequest="300" HorizontalOptions="End" BackgroundColor="DarkGray" Opacity="0.5">
+                <StackLayout Orientation="Vertical">
+                    <ListView x:Name="SideBarList" HorizontalOptions="CenterAndExpand" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never" VerticalOptions="Start">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <mappy:ObjectCell />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                        <Button x:Name="HideSidebarButton" Text="Hide" TextColor="LightGray" BorderColor="LightGray" BackgroundColor="Black" Clicked="CloseSidePanel" HorizontalOptions="Start" VerticalOptions="End"></Button>
+                        <Button x:Name="MainMenuButton" Text="Main Menu" TextColor="LightGray" BorderColor="LightGray" BackgroundColor="Black" Clicked="MainMenuButton_Clicked" HorizontalOptions="End" VerticalOptions="End"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ContentView>
+        -->
+        <ContentView x:Name="SideBar" AbsoluteLayout.LayoutBounds="1,0,0.25,1" AbsoluteLayout.LayoutFlags="All">
+            <Frame BorderColor="Gray" BackgroundColor="#AA000000" WidthRequest="300" HorizontalOptions="End" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <Frame x:Name="SideBarList" BorderColor="Gray" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start">
+                    </Frame>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                        <Button x:Name="HideSidebarButton" Text="Hide" TextColor="Gray" BorderColor="Gray" BackgroundColor="Black" Clicked="CloseSidePanel" HorizontalOptions="Start" VerticalOptions="End"></Button>
+                        <Button x:Name="MainMenuButton" Text="Main Menu" TextColor="Gray" BorderColor="Gray" BackgroundColor="Black" Clicked="MainMenuButton_Clicked" HorizontalOptions="End" VerticalOptions="End"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ContentView>
+    </AbsoluteLayout>
+</ContentPage>
