@@ -1,0 +1,65 @@
+[
+  {
+    "Name": "Background",
+    "Image": "Reserve_Black-BG.png"
+  },
+  {
+    "Name": "Grass",
+    "Image": "Reserve_Grass.png"
+  },
+  {
+    "Name": "Dirt Paths",
+    "Image": "Reserve_Dirt-Path.png"
+  },
+  {
+    "Name": "Concrete",
+    "Image": "Reserve_Concrete.png"
+  },
+  {
+    "Name": "Rail",
+    "Image": "Reserve_Rail.png"
+  },
+  {
+    "Name": "Structures",
+    "Image": "Reserve_Structures.png"
+  },
+  {
+    "Name": "Border",
+    "Image": "Reserve_Border.png"
+  },
+  {
+    "Name": "Building Icons",
+    "Image": "Reserve_Building-Icons.png"
+  },
+  {
+    "Name": "Extracts",
+    "Children": [
+      {
+        "Name": "Scav",
+        "Children": [
+          {
+            "Name": "Text",
+            "Image": "Reserve_Extracts_Scav_Text.png"
+          },
+          {
+            "Name": "Markers",
+            "Image": "Reserve_Extracts_Scav_Markers.png"
+          }
+        ]
+      },
+      {
+        "Name": "PMC",
+        "Children": [
+          {
+            "Name": "Text",
+            "Image": "Reserve_Extracts_PMC_Text.png"
+          },
+          {
+            "Name": "Markers",
+            "Image": "Reserve_Extracts_PMC_Markers.png"
+          }
+        ]
+      }
+    ]
+  }
+]

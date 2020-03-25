@@ -23,7 +23,7 @@ namespace Mappy.Views
         {
             if (newView == Selected || newView == null) return;
 
-            Selected.UnHighlight();
+            Selected?.UnHighlight();
 
             stack.Children.Clear();
 
@@ -48,6 +48,11 @@ namespace Mappy.Views
             {
                 Text = "Open"
             };
+
+            stack.Children.Add(title);
+            stack.Children.Add(author);
+            stack.Children.Add(map);
+            stack.Children.Add(btn);
 
             btn.Clicked += OpenButtonClicked;
 

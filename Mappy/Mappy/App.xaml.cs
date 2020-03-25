@@ -16,6 +16,10 @@ namespace Mappy
 
         public App()
         {
+            app = this;
+
+            pages = new Dictionary<string, Page>();
+
             InitializeComponent();
 
             MainPage = Menu = new MainPage();

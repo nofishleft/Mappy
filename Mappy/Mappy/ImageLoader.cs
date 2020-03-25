@@ -1,15 +1,12 @@
 ﻿using SkiaSharp;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace Mappy
 {
     public class ImageLoader
     {
-
 #if __IOS__
         public static string resourcePrefix = "Mappy.iOS."
 #elif __ANDROID__
