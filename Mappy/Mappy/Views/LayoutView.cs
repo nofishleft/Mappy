@@ -19,13 +19,11 @@ namespace Mappy.Views
             this.mainView = mainView;
             this.layoutFile = layoutFile;
 
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label { Text = "Welcome to Xamarin.Forms!" }
-                },
+            LoadMeta();
 
-                Orientation = StackOrientation.Vertical
+            Content = new Frame
+            {
+                Content = new Label { Text = meta.Name }
             };
 
             TapGestureRecognizer tap = new TapGestureRecognizer();
@@ -37,9 +35,6 @@ namespace Mappy.Views
 
         public void Tapped(object sender, EventArgs e)
         {
-            // Dynamically load metadata as needed
-            if (meta == null) LoadMeta();
-
             mainView.Select(this);
         }
 

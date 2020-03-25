@@ -58,7 +58,7 @@ namespace Mappy.Views
 
         public void OpenButtonClicked(object sender, EventArgs args)
         {
-            App.app.LoadMap(Selected.meta.Map);
+            App.app.LoadMap(Selected.layoutFile);
         }
     }
 }

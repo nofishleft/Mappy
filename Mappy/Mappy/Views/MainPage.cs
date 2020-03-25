@@ -25,7 +25,9 @@ namespace Mappy.Views
                     {
                         new LayoutView("reserve.json", mainView)
                     }
-                }
+                },
+
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Never
             };
 
             Content = new Grid
