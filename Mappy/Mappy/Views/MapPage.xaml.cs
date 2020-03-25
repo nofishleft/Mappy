@@ -90,7 +90,6 @@ namespace Mappy.Views
         public void LoadBrushes()
         {
             clearColor = Color.Black.ToSKColor();
-            //clearColor = Color.Yellow.ToSKColor();
         }
 
         public void CloseSidePanel()
@@ -152,7 +151,7 @@ namespace Mappy.Views
 
         private void MainMenuButton_Clicked(object sender, System.EventArgs e)
         {
-            //App.BackToMainMenu();
+            App.app.BackToMainMenu();
         }
     }
 }

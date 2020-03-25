@@ -9,19 +9,24 @@ namespace Mappy.Views
 {
     public class MainPage : ContentPage
     {
-        ListView sideView;
-        Frame mainView;
+        ScrollView sideView;
+        MainView mainView;
         public MainPage()
         {
-            Content = new StackLayout
+            mainView = new MainView();
+
+            sideView = new ScrollView()
             {
-                Children = {
-                    new Label { Text = "Welcome to Xamarin.Forms!" }
+                Content = new StackLayout
+                {
+                    Orientation = StackOrientation.Vertical,
+
+                    Children =
+                    {
+                        new LayoutView("reserve.json", mainView)
+                    }
                 }
             };
-
-            sideView = new ListView();
-            mainView = new Frame();
 
             Content = new Grid
             {
